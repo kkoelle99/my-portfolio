@@ -10,7 +10,7 @@ function Footer() {
         </p>
         <div className="flex justify-center space-x-4 mt-4">
           <a
-            href="https://github.com/kaleb"
+            href="https://github.com/kkoelle99"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-hoverblue"
@@ -18,14 +18,14 @@ function Footer() {
             <FaGithub size={20} />
           </a>
           <a
-            href="https://www.linkedin.com/in/kaleb"
+            href="https://www.linkedin.com/in/kaleb-koelle-86719a1ba/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-hoverblue"
           >
             <FaLinkedin size={20} />
           </a>
-          <a href="mailto:kaleb@example.com" className="hover:text-hoverblue">
+          <a href="mailto:kkoelle99@gmail.com" className="hover:text-hoverblue">
             <FaEnvelope size={20} />
           </a>
         </div>

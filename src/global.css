@@ -1,11 +1,19 @@
 /* global.css */
-body {
-  margin: 0;
+
+/* Reset body margin and set full height */
+html, body {
+  height: 100%; /* Full height */
+  margin: 0;    /* Reset margin */
   font-family: Arial, sans-serif;
-  background: #d6eaff;
+  background-color: #d6eaff;
   color: #001f54;
+  display: flex;  /* Enable flexbox */
+  flex-direction: column; /* Vertical flow */
+  justify-content: flex-start; /* Align content from top */
+  align-items: center; /* Center horizontally */
 }
 
+/* Header styles */
 header {
   background-color: #add8e6;
   color: #001f54;
@@ -13,7 +21,7 @@ header {
   text-align: center;
 }
 
-/* Remove the global a styles and target links specifically in the header */
+/* Header anchor styles */
 header a {
   color: #001f54;
   text-decoration: none;
@@ -21,12 +29,13 @@ header a {
   transition: transform 0.3s, color 0.3s;
 }
 
-/* Hover effect */
+/* Header anchor hover effect */
 header a:hover {
   color: #001f54;
   transform: scale(1.75);
 }
 
+/* List styles */
 ul {
   list-style: none;
   padding: 0;
@@ -37,12 +46,14 @@ li {
   margin: 0 10px;
 }
 
+/* Footer styles */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: #add8e6; /* Light blue */
-  color: #001f54; /* Navy blue */
+  background-color: #add8e6;
+  color: #001f54;
+  margin-top: auto;  /* Push footer to the bottom */
 }
