@@ -1,0 +1,48 @@
+/* global.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #d6eaff;
+  color: #001f54;
+}
+
+header {
+  background-color: #add8e6;
+  color: #001f54;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Remove the global a styles and target links specifically in the header */
+header a {
+  color: #001f54;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+header a:hover {
+  color: #001f54;
+  transform: scale(1.75);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #add8e6; /* Light blue */
+  color: #001f54; /* Navy blue */
+}
