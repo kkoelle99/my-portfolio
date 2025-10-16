@@ -1,5 +1,4 @@
 // Skills.js
-
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
@@ -18,6 +17,21 @@ const skillsList = [
 ];
 
 export default function Skills() {
+  // Stagger animation variants
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       {/* Hero / Header */}
@@ -43,17 +57,18 @@ export default function Skills() {
       {/* Skills Grid */}
       <motion.section
         className="flex-1 py-24 px-6 sm:px-12 text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {skillsList.map((skill) => (
             <motion.div
               key={skill}
-              whileHover={{ scale: 1.1 }}
-              className="bg-gray-800 rounded-lg p-6 font-medium text-lg border border-gray-700 hover:border-blue-500 transition"
+              variants={item}
+              whileHover={{ scale: 1.1, borderColor: "#3b82f6" }}
+              className="skill-badge cursor-pointer"
             >
               {skill}
             </motion.div>
@@ -61,7 +76,7 @@ export default function Skills() {
         </div>
       </motion.section>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 /* global.css */
 
-/* Reset default spacing and ensure full height */
+/* ---------------- Reset & Base ---------------- */
 html,
 body {
   height: 100%;
@@ -10,12 +10,11 @@ body {
   color: #f8fafc;
 }
 
-/* Smooth transitions for theme changes */
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header */
+/* ---------------- Header ---------------- */
 header {
   background-color: #1e293b;
   color: #f8fafc;
@@ -35,7 +34,7 @@ header a:hover {
   transform: scale(1.1);
 }
 
-/* Footer */
+/* ---------------- Footer ---------------- */
 footer {
   display: flex;
   justify-content: center;
@@ -48,7 +47,7 @@ footer {
   margin-top: auto;
 }
 
-/* List reset */
+/* ---------------- List reset ---------------- */
 ul {
   list-style: none;
   padding: 0;
@@ -60,7 +59,7 @@ li {
   margin: 0 10px;
 }
 
-/* Animated gradient background */
+/* ---------------- Animated Gradient ---------------- */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -162,7 +161,7 @@ li {
   text-align: center;
   margin-top: -6rem;
   border-radius: 2rem 2rem 0 0;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .about-section h2 {
@@ -215,11 +214,13 @@ li {
   border-radius: 9999px;
   font-weight: 500;
   border: 1px solid #334155;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .skill-badge:hover {
   border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
 /* ---------------- Projects Section ---------------- */
@@ -256,7 +257,7 @@ li {
   background-color: #0f172a;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
 
