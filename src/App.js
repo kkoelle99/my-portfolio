@@ -5,6 +5,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"; // ✅ u
 import "./global.css";
 // Components
 import Home from "./components/Home";
+import Skills from "./components/Skills";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Skills />} />
           </Routes>
         </main>
         <Footer />
