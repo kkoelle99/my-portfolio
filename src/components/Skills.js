@@ -75,9 +75,6 @@ export default function Skills() {
           ))}
         </div>
       </motion.section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
