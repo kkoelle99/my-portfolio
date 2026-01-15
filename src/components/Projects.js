@@ -6,7 +6,7 @@ const projectsList = [
     title: "Spendy",
     description:
       "A personal finance web app to track expenses and visualize budgets using React, Node.js and Auth0. ",
-    link: "/https://spendy-beta.vercel.app//spendy",
+    link: "https://spendy-beta.vercel.app",
     status: "Live",
   },
   {
