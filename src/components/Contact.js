@@ -1,91 +1,64 @@
-import React, { useState } from "react";
+//Contact.js
 
-function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [formError, setFormError] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+import React from "react";
+import { motion } from "framer-motion";
+import Footer from "./Footer";
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const validateForm = () => {
-    if (!formData.name || !formData.email || !formData.message) {
-      setFormError("All fields are required.");
-      return false;
-    }
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setFormError("Please enter a valid email address.");
-      return false;
-    }
-    setFormError("");
-    return true;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setSuccessMessage("Your message has been sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
-    }, 2000); // Simulate a delay
-  };
-
+export default function Contact() {
   return (
-    <section id="contact" className="p-8 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center">Contact</h2>
-      {formError && <p className="text-red-500 text-center">{formError}</p>}
-      {successMessage && (
-        <p className="text-green-500 text-center">{successMessage}</p>
-      )}
-      <form onSubmit={handleSubmit} className="mt-4 max-w-lg mx-auto">
-        <div className="mb-3">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name (e.g., John Doe)"
-            value={formData.name}
-            onChange={handleChange}
-            className="block w-full p-3 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        <div className="mb-3">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email (e.g., john@example.com)"
-            value={formData.email}
-            onChange={handleChange}
-            className="block w-full p-3 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        <div className="mb-3">
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            className="block w-full p-3 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded w-full hover:bg-blue-600"
-          disabled={isSubmitting}
+    <div className="flex flex-col min-h-screen">
+      {/* Header */}
+      <section className="contact-hero">
+        <motion.h1
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </button>
-      </form>
-    </section>
+          Get In Touch
+        </motion.h1>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
+        >
+          I'm always open to discussing new opportunities, collaborations, or
+          just talking tech.
+        </motion.p>
+      </section>
+
+      {/* Contact Methods */}
+      <motion.section
+        className="contact-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+      >
+        <div className="contact-card">
+          <h3>Email</h3>
+          <a href="mailto:kkoelle99@gmail.com">kkoelle99@gmail.com</a>
+        </div>
+        <div className="contact-card">
+          <h3>LinkedIn</h3>
+          <a
+            href="https://www.linkedin.com/in/kaleb-koelle-86719a1ba/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Connect with me
+          </a>
+        </div>
+        <div className="contact-card">
+          <h3>GitHub</h3>
+          <a
+            href="https://github.com/KoelleKaleb-FS"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View my work
+          </a>
+        </div>
+      </motion.section>
+      <Footer />
+    </div>
   );
 }
-
-export default Contact;
