@@ -1,3 +1,4 @@
+// Projects.js
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -5,15 +6,16 @@ const projectsList = [
   {
     title: "Spendy",
     description:
-      "A personal finance web app to track expenses and visualize budgets using React, Node.js and Auth0. ",
-    link: "https://spendy-beta.vercel.app",
+      "A personal finance web app to track expenses and visualize budgets using React, Node.js and Auth0.",
     status: "Live",
+    link: "https://spendy-beta.vercel.app/",
   },
   {
     title: "Call Out Bot",
     description:
       "A Discord bot that automates player callouts and logs availability with MongoDB + Google Sheets.",
     status: "Live",
+    // No link yet
   },
   {
     title: "Coming Soon",
@@ -25,7 +27,7 @@ const projectsList = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 tex-white">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       {/* Hero / Header */}
       <section className="relative flex flex-col items-center justify-center h-64 text-center py-12">
         <motion.h1
@@ -42,7 +44,7 @@ export default function Projects() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Here's a collection of my work some live, some still in development.
+          Here's a collection of my work — some live, some still in development.
         </motion.p>
       </section>
 
@@ -58,7 +60,7 @@ export default function Projects() {
           {projectsList.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ y: 5 }}
+              whileHover={{ y: -5 }}
               className="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all flex flex-col justify-between"
             >
               <div>
@@ -71,6 +73,8 @@ export default function Projects() {
                 {project.link && project.status === "Live" ? (
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block mt-2 text-blue-400 hover:underline"
                   >
                     View Project
