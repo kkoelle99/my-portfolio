@@ -25,7 +25,7 @@ export default function Home() {
           className="hero-subtitle relative z-10"
           initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
         >
           Full-Stack Developer passionate about creating engaging, accessible,
           and scalable web applications.
