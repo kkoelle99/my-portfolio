@@ -14,27 +14,27 @@ export default function Home() {
           transition={{ duration: 1.2 }}
         />
         <motion.h1
-          className="hero-title"
-          initial={{ y: 40, opacity: 0 }}
+          className="hero-title relative z-10"
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
           Hi, I’m <span className="highlight">Kaleb Koelle</span>
         </motion.h1>
         <motion.p
-          className="hero-subtitle"
-          initial={{ y: 40, opacity: 0 }}
+          className="hero-subtitle relative z-10"
+          initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
         >
           Full-Stack Developer passionate about creating engaging, accessible,
           and scalable web applications.
         </motion.p>
         <motion.div
-          className="hero-buttons"
-          initial={{ y: 30, opacity: 0 }}
+          className="hero-buttons relative z-10"
+          initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
         >
           <Link to="/projects" className="btn-primary">
             View My Work
