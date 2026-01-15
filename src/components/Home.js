@@ -23,7 +23,7 @@ export default function Home() {
         </motion.h1>
         <motion.p
           className="hero-subtitle relative z-10"
-          initial={{ y: 15, opacity: 0 }}
+          initial={false}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
@@ -32,7 +32,7 @@ export default function Home() {
         </motion.p>
         <motion.div
           className="hero-buttons relative z-10"
-          initial={{ y: 10, opacity: 0 }}
+          initial={false}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
         >
