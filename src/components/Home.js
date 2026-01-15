@@ -110,12 +110,9 @@ export default function Home() {
           <motion.div className="project-card" whileHover={{ y: -5 }}>
             <h3 className="project-title">Spendy</h3>
             <p>
-              A personal finance web app to track expenses and visualize
-              budgets using React, Node.js, and Auth0.
+              A personal finance web app to track expenses and visualize budgets
+              using React, Node.js, and Auth0.
             </p>
-            <Link to="/projects/spendy" className="link-primary">
-              View Project
-            </Link>
           </motion.div>
 
           {/* Call Out Bot */}
@@ -125,15 +122,14 @@ export default function Home() {
               A Discord bot that automates player callouts and logs availability
               with MongoDB + Google Sheets.
             </p>
-            <Link to="/projects/call-out-bot" className="link-primary">
-              View Project
-            </Link>
           </motion.div>
 
           {/* Coming Soon */}
           <motion.div className="project-card" whileHover={{ y: -5 }}>
             <h3 className="project-title">Coming Soon</h3>
-            <p>A new project is in progress — stay tuned for the next big thing.</p>
+            <p>
+              A new project is in progress — stay tuned for the next big thing.
+            </p>
             <span className="coming-soon">In Development</span>
           </motion.div>
         </div>
