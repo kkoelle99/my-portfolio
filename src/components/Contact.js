@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Footer from "./Footer";
 
 export default function Contact() {
   return (
@@ -58,7 +57,6 @@ export default function Contact() {
           </a>
         </div>
       </motion.section>
-      <Footer />
     </div>
   );
 }
