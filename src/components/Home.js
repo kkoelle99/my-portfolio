@@ -7,45 +7,42 @@ export default function Home() {
     <div className="home-container">
       {/* Hero Section */}
       <section className="hero-section">
+        {/* Background */}
         <motion.div
           className="hero-bg animate-gradient"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
         />
-        <motion.h1
-          className="hero-title relative z-10"
-          initial={{ y: 20, opacity: 0 }}
+
+        {/* Wrap all hero content in one motion container */}
+        <motion.div
+          className="hero-content relative z-10 flex flex-col items-center text-center"
+          initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Hi, I’m <span className="highlight">Kaleb Koelle</span>
-        </motion.h1>
-        <motion.p
-          className="hero-subtitle relative z-10"
-          initial={false}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
-        >
-          Full-Stack Developer passionate about creating engaging, accessible,
-          and scalable web applications.
-        </motion.p>
-        <motion.div
-          className="hero-buttons relative z-10"
-          initial={false}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1 }}
-        >
-          <Link to="/projects" className="btn-primary">
-            View My Work
-          </Link>
-          <Link to="/contact" className="btn-secondary">
-            Contact
-          </Link>
+          <h1 className="hero-title">
+            Hi, I’m <span className="highlight">Kaleb Koelle</span>
+          </h1>
+
+          <p className="hero-subtitle mt-4 max-w-2xl">
+            Full-Stack Developer passionate about creating engaging, accessible,
+            and scalable web applications.
+          </p>
+
+          <div className="hero-buttons mt-6 flex gap-4">
+            <Link to="/projects" className="btn-primary">
+              View My Work
+            </Link>
+            <Link to="/contact" className="btn-secondary">
+              Contact
+            </Link>
+          </div>
         </motion.div>
       </section>
 
-      {/* About Snapshot */}
+      {/* About Section */}
       <motion.section
         className="about-section"
         initial={{ opacity: 0, y: 60 }}
